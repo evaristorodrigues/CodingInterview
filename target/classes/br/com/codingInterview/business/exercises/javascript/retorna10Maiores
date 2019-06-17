@@ -1,0 +1,25 @@
+const numbers = [99, 44, 6, 2, 1, 5, 63, 87, 283, 4, 0, 1000, 255, 25 , 22 ,88 ,11,18,888,777,333,111,999];
+
+function retorna10Maiores(array) {
+  let maiores = [];
+  let contador= 0;
+ for( let i = 0; i < numbers.length - 1; i++){
+  var aux =i+1;
+  for( let j = 0; j < (numbers.length -aux); j++){
+    if(numbers[j] > numbers[j+1]){
+      var a =  numbers[j+1];
+      numbers[j+1] = numbers[j];
+      numbers[j] =  a;
+    }
+  }
+  if(contador <10){
+    maiores.push(numbers[numbers.length -aux]);
+    contador++;
+  }else{
+    return maiores;
+  } 
+ }
+ return maiores;
+}
+
+retorna10Maiores(numbers);
