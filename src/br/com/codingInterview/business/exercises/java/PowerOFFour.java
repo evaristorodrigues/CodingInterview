@@ -22,13 +22,27 @@ public class PowerOFFour {
 	 */
 	public static void main(String[] args) {
 		PowerOFFour p = new PowerOFFour();
-		int num = 16;
+		int num = 63;
 		System.out.println(p.isPowerOfFour(num ));
 
 	}
 	
-    public boolean isPowerOfFour(int num) {
+    public boolean isPowerOfFour2(int num) {
         return (Math.log10(num) / Math.log10(4)) % 1 == 0;
     }
+    
+    public boolean isPowerOfFour(int num) {
+        return isPowerOfTwo(num) && isDividedByThree(num - 1);
+    }
+
+	private boolean isPowerOfTwo(int num) {
+		
+		return num  > 0 && ( num & (num - 1)) ==0;
+	}
+
+	private boolean isDividedByThree(int i) {
+		// TODO Auto-generated method stub
+		return i % 3 == 0;
+	}
 
 }

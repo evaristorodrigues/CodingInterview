@@ -48,16 +48,54 @@ public class NumberOf1Bits {
 	 */
 	public static void main(String[] args) {
 		NumberOf1Bits nb = new NumberOf1Bits();
-		int n = 128;
+		int n = 15;
 		System.out.println(nb.hammingWeight(n ));
+		
+	   
 
 	}
 	
     // you need to treat n as an unsigned value
-    public int hammingWeight(int n) {
+    public int hammingWeight2(int n) {
       String b = Integer.toBinaryString(n);
       b = b.replaceAll("0", "").trim();        
       return b.length();
     }
+    
+    public int hammingWeight3(int n) {
+    	int result = 0;
+    	
+    	while(n!=0) {
+    		result +=(n & 1);
+    		n >>>= 1;
+    	}
+        
+    	return result;
+      }
+    
+    public int hammingWeight4(int n) {
+    	int result = 0;
+    	int shift = 1;
+    	
+    	for( int i = 0; i < 32; i++) {
+    		
+    		if((n & shift) !=0) {
+    			result++;
+    		}
+    		shift <<= 1;
+    	}        
+        
+    	return result;
+      }
+    
+    public int hammingWeight(int n) {
+    	int result = 0;
+
+    	while(n!=0) {
+    		result++;
+    		n = n & (n-1);
+    	}
+    	return result;
+      }
 
 }

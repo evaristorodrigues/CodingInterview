@@ -44,9 +44,14 @@ public class PowerOfTwo {
     	return (Math.log10(n)/Math.log10(2))% 1== 0;
     }
     //FIXME Estudar
-    public boolean isPowerOfTwo(int n) 
+    public boolean isPowerOfTwo4(int n) 
     {
         return n > 0 && (n & n - 1) == 0;
+    }
+    
+    public boolean isPowerOfTwo(int n) 
+    {
+        return n > 0 && Integer.bitCount(n) ==1;
     }
 
 }
