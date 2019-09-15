@@ -1,4 +1,5 @@
 eclipse.preferences.version=1
-encoding//src/br/com/codingInterview/business/exercises/java/CountAndSay.java=UTF-8
-encoding//src/br/com/codingInterview/business/exercises/java/MajorityElement.java=UTF-8
-encoding//src/br/com/codingInterview/business/exercises/java/PascalsTriangleII.java=UTF-8
+encoding//src/br/com/codingInterview/business/leetcode/exercises/java/CountAndSay.java=UTF-8
+encoding//src/br/com/codingInterview/business/leetcode/exercises/java/FindPeakElement.java=UTF-8
+encoding//src/br/com/codingInterview/business/leetcode/exercises/java/MajorityElement.java=UTF-8
+encoding//src/br/com/codingInterview/business/leetcode/exercises/java/PascalsTriangleII.java=UTF-8
