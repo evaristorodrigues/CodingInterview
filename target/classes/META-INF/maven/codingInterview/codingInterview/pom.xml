@@ -6,6 +6,12 @@
 	<artifactId>codingInterview</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 
+	<properties>
+		<project.java.version>1.8</project.java.version>
+		<project.build.sourceEncoding>iso-8859-1</project.build.sourceEncoding>
+		<project.reporting.outputEncoding>iso-8859-1</project.reporting.outputEncoding>
+	</properties>
+
 	<dependencies>
 
 
